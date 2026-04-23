@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>India Travel Planner</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">India Tours 🇮🇳</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#destinations">Destinations</a></li>
+            <li><a href="#planner">Planner</a></li>
+        </ul>
+        <button id="darkModeBtn" title="Toggle dark mode">🌙</button>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="mandala"></div>
+            <div class="mandala"></div>
+            <div class="mandala"></div>
+        </div>
+        <div class="hero-content">
+            <p class="hero-eyebrow">Discover · Explore · Experience</p>
+            <h1>Explore<br/><em>Incredible India</em></h1>
+            <p class="hero-sub">From Himalayan peaks to coastal shores — your journey begins here.</p>
+        </div>
+        <div class="hero-scroll"><span>↓</span> scroll</div>
+    </section>
+
+    <section class="search-section">
+        <div class="search-top">
+            <h2>Where do you want to go?</h2>
+            <div class="search-inner">
+                <input type="text" id="search" placeholder="Type a destination e.g. Goa, Manali…" autocomplete="off" />
+                <span class="search-icon">🔍</span>
+            </div>
+        </div>
+        <div class="search-results" id="searchResults">
+            <p class="search-results-heading">Photos of <span id="searchLabel"></span></p>
+            <div class="search-grid" id="searchGrid"></div>
+        </div>
+        <p class="no-results-msg" id="noResultsMsg">No destinations matched your search.</p>
+    </section>
+
+    =
+    <section id="destinations" class="section">
+        <div class="section-header">
+            <p class="section-eyebrow">Where to go</p>
+            <h2>Popular Destinations</h2>
+        </div>
+        <div class="cards">
+
+            <div class="card" data-name="goa">
+                <div class="card-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=600&h=400&fit=crop&auto=format" alt="Goa" onerror="this.src='https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&h=400&fit=crop&auto=format'" />
+                    <div class="card-overlay"></div>
+                    <div class="card-badge">Beach</div>
+                </div>
+                <div class="card-body">
+                    <h3>Goa</h3>
+                    <p>Sunlit shores, vibrant nightlife & Portuguese charm</p>
+                </div>
+            </div>
+
+            <div class="card" data-name="manali">
+                <div class="card-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=600&h=400&fit=crop&auto=format" alt="Manali" onerror="this.src='https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?w=600&h=400&fit=crop&auto=format'" />
+                    <div class="card-overlay"></div>
+                    <div class="card-badge">Mountain</div>
+                </div>
+                <div class="card-body">
+                    <h3>Manali</h3>
+                    <p>Snow-capped peaks & alpine meadows in Himachal</p>
+                </div>
+            </div>
+
+            <div class="card" data-name="jaipur">
+                <div class="card-img-wrap">
+                    <img src="https://images.pexels.com/photos/12931430/pexels-photo-12931430.jpeg" alt="Jaipur" onerror="this.src='https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=600&h=400&fit=crop&auto=format'" />
+                    <div class="card-overlay"></div>
+                    <div class="card-badge">Heritage</div>
+                </div>
+                <div class="card-body">
+                    <h3>Jaipur</h3>
+                    <p>The Pink City — forts, palaces & Rajasthani culture</p>
+                </div>
+            </div>
+
+            <div class="card" data-name="agra">
+                <div class="card-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1548013146-72479768bada?w=600&h=400&fit=crop&auto=format" alt="Agra" onerror="this.src='https://images.unsplash.com/photo-1564507592333-c60657eea523?w=600&h=400&fit=crop&auto=format'" />
+                    <div class="card-overlay"></div>
+                    <div class="card-badge">Wonder</div>
+                </div>
+                <div class="card-body">
+                    <h3>Agra</h3>
+                    <p>Home of the Taj Mahal — a monument to eternal love</p>
+                </div>
+            </div>
+
+            <div class="card" data-name="kerala">
+                <div class="card-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=600&h=400&fit=crop&auto=format" alt="Kerala" onerror="this.src='https://images.unsplash.com/photo-1593693397690-362cb9666fc2?w=600&h=400&fit=crop&auto=format'" />
+                    <div class="card-overlay"></div>
+                    <div class="card-badge">Backwaters</div>
+                </div>
+                <div class="card-body">
+                    <h3>Kerala</h3>
+                    <p>God's Own Country — lush backwaters & spice trails</p>
+                </div>
+            </div>
+
+            <div class="card" data-name="ladakh">
+                <div class="card-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop&auto=format" alt="Ladakh" onerror="this.src='https://images.unsplash.com/photo-1544739313-6fadf0ec4c3b?w=600&h=400&fit=crop&auto=format'" />
+                    <div class="card-overlay"></div>
+                    <div class="card-badge">Adventure</div>
+                </div>
+                <div class="card-body">
+                    <h3>Ladakh</h3>
+                    <p>High-altitude desert, monasteries & star-lit skies</p>
+                </div>
+            </div>
+
+            <div class="card" data-name="amritsar">
+                <div class="card-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1609947017136-9daf32a5eb16?w=600&h=400&fit=crop&auto=format" alt="Amritsar" onerror="this.src='https://images.unsplash.com/photo-1588096344356-9c9161d3a456?w=600&h=400&fit=crop&auto=format'" />
+                    <div class="card-overlay"></div>
+                    <div class="card-badge">Spiritual</div>
+                </div>
+                <div class="card-body">
+                    <h3>Amritsar</h3>
+                    <p>The Golden Temple — a beacon of faith and serenity</p>
+                </div>
+            </div>
+
+            <div class="card" data-name="varanasi">
+                <div class="card-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1561361058-c24cecae35ca?w=600&h=400&fit=crop&auto=format" alt="Varanasi" onerror="this.src='https://images.unsplash.com/photo-1598091383021-15ddea10925d?w=600&h=400&fit=crop&auto=format'" />
+                    <div class="card-overlay"></div>
+                    <div class="card-badge">Sacred</div>
+                </div>
+                <div class="card-body">
+                    <h3>Varanasi</h3>
+                    <p>Ancient ghats, river rituals & the soul of India</p>
+                </div>
+            </div>
+
+            <div class="card" data-name="mysore">
+                <div class="card-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1580492516014-4a28235b4c61?w=600&h=400&fit=crop&auto=format" alt="Mysore" onerror="this.src='https://images.unsplash.com/photo-1596176530529-78163a4f7af2?w=600&h=400&fit=crop&auto=format'" />
+                    <div class="card-overlay"></div>
+                    <div class="card-badge">Royal</div>
+                </div>
+                <div class="card-body">
+                    <h3>Mysore</h3>
+                    <p>Illuminated palace, sandalwood & silk weaving city</p>
+                </div>
+            </div>
+
+            <div class="card" data-name="andaman">
+                <div class="card-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1585516482738-31f4e4d1a5d1?w=600&h=400&fit=crop&auto=format" alt="Andaman" onerror="this.src='https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&h=400&fit=crop&auto=format'" />
+                    <div class="card-overlay"></div>
+                    <div class="card-badge">Island</div>
+                </div>
+                <div class="card-body">
+                    <h3>Andaman</h3>
+                    <p>Turquoise waters, coral reefs & untouched paradise</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="planner" class="section planner-bg">
+        <div class="section-header">
+            <p class="section-eyebrow">Budget estimator</p>
+            <h2>Plan Your Trip 💰</h2>
+        </div>
+        <div class="planner-grid">
+            <div class="planner-form">
+                <div class="form-group">
+                    <label>Choose Destination</label>
+                    <select id="destination">
+            <option value="goa">🏖️ Goa</option>
+            <option value="manali">🏔️ Manali</option>
+            <option value="jaipur">🏰 Jaipur</option>
+            <option value="agra">🕌 Agra</option>
+            <option value="kerala">🌿 Kerala</option>
+            <option value="ladakh">⛰️ Ladakh</option>
+            <option value="amritsar">🛕 Amritsar</option>
+            <option value="varanasi">🪔 Varanasi</option>
+            <option value="mysore">👑 Mysore</option>
+            <option value="andaman">🐠 Andaman</option>
+          </select>
+                </div>
+                <div class="form-group">
+                    <label>Your Budget (₹)</label>
+                    <input type="number" id="budget" placeholder="e.g. 12000" min="0" />
+                </div>
+                <button class="btn-plan" id="planBtn">Check My Trip →</button>
+            </div>
+            <div id="result">
+                <div class="placeholder-card">
+                    <div class="big-icon">✈️</div>
+                    <p>Select a destination and enter your budget to find out if your trip is within reach.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 India Travel Planner &nbsp;·&nbsp; Crafted with ❤️ in India</p>
+    </footer>
+
+    <div class="toast" id="toast"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>
